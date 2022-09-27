@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>我的第一篇博客文章 | Hexo</title>
+  <title>搭建个人博客 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="我的第一篇博客文章">
-<meta property="og:url" content="http://example.com/2022/09/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/index.html">
+  <meta name="description" content="搭建方式:hexo+github仓库 搭建博客过程准备知识： ①git基本操作和版本，分支知识 ②云主机的配置，仓库版本的同步控制 一,搭建本地博客仓库   准备环境: ​		下载node.js，安装npm并且查看node和npm版本 ​		查看node 和npm版本命令：	 ​		node -v ​		npm -v ​		安装镜像源: ​		npm install -g cnpm –regist">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建个人博客">
+<meta property="og:url" content="http://example.com/2022/09/27/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="搭建方式:hexo+github仓库 搭建博客过程准备知识： ①git基本操作和版本，分支知识 ②云主机的配置，仓库版本的同步控制 一,搭建本地博客仓库   准备环境: ​		下载node.js，安装npm并且查看node和npm版本 ​		查看node 和npm版本命令：	 ​		node -v ​		npm -v ​		安装镜像源: ​		npm install -g cnpm –regist">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-09-27T04:30:33.000Z">
-<meta property="article:modified_time" content="2022-09-27T04:30:33.129Z">
+<meta property="article:published_time" content="2022-09-27T05:36:55.000Z">
+<meta property="article:modified_time" content="2022-09-27T05:41:25.288Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -152,27 +154,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-我的第一篇博客文章" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-搭建个人博客" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      我的第一篇博客文章
+      搭建个人博客
     </h1>
   
 
         
-        <a href="/2022/09/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2022-09-27T04:30:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-27</time>
+        <a href="/2022/09/27/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
+  	<time datetime="2022-09-27T05:36:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>搭建方式:hexo+github仓库</p>
+<p>搭建博客过程准备知识：</p>
+<p>①git基本操作和版本，分支知识</p>
+<p>②云主机的配置，仓库版本的同步控制</p>
+<p>一,搭建本地博客仓库</p>
+<p>  准备环境:</p>
+<p>​		下载node.js，安装npm并且查看node和npm版本</p>
+<p>​		查看node 和npm版本命令：	</p>
+<p>​		node -v</p>
+<p>​		npm -v</p>
+<p>​		安装镜像源:</p>
+<p>​		npm install -g cnpm –registry&#x3D;<a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
+<p>​		运行cnpm</p>
+<p>​		查看cnpm版本信息</p>
+<p>​		cnpm -v</p>
+<p>​		运行以下命令:</p>
+<p>​		cnmp install -g hexo-cli</p>
+<p>​		hexo -v   &#x2F;&#x2F;查看hexo版本信息</p>
+<p>​		mkdir blog &#x2F;&#x2F;建立空的个人博客文件夹</p>
+<p>​		cd blog&#x2F;     &#x2F;&#x2F;进入博客目录</p>
+<p>​		sudo(这个在linux下才需要，windows下不需要)	hexo init	&#x2F;&#x2F;初始化hexo,形成默认个人博客页面</p>
+<p>​		ls -l   &#x2F;&#x2F;查看blog下的文件，也就是刚刚hexo初始化生成的博客文件</p>
+<p>​		hexo s  &#x2F;&#x2F;启动博客在本地渲染，会自动生成一个本地端口地址，打开就可以看见个人博客</p>
+<p>​		hexo n “博客文章名” &#x2F;&#x2F;其中n是new的缩写，这个命令是在source&#x2F;_posts&#x2F;博客文章名.md,所有的博客都是以.md形式存储在__posts文件夹下</p>
+<p>​		hexo clean  &#x2F;&#x2F;清理命令 </p>
+<p>​		hexo g		&#x2F;&#x2F;g是generate，生成的意思，意思是生成hexo</p>
+<p>二，部署到github本地仓库</p>
+<p>​	1，新建一个仓库命名为用户名.github.io，必须是这样形式才能进行网络访问blog</p>
+<p>​	2，cnpm install –save hexo-deployer_git     &#x2F;&#x2F;安装</p>
+<p>​	3,vim _config.yml 		&#x2F;&#x2F;进入这个文件修改配置,找到#Deployment   在下面的type后面填上git（不要引号)，再在下面加上一行repo: 创建的github仓库的地址,再在repo下加上一行branch: master(这个分支是你创建的，一定要和你的github上的分支对应，分支控制很重要，最好一开始没有创建分支)</p>
+<p>​	4,hexo g		&#x2F;&#x2F;一定要再生成，然后才部署到远端仓库，不然直接hexo d是没用的</p>
+<p>​	5,hexo d		&#x2F;&#x2F;前面已经通过修改_config.yml修改了部署方式，直接hexo d就可以同步到远端仓库</p>
+<p>至此，已经全部部署完成，直接通过 用户名.github.io就可以通过公网访问个人博客了，由于时间关系暂时不会博客写作，有点凌乱，暂且作为一次部署笔记，后面再部署到云端服务器.<br>    6,注意一点，直接在_hosts下创建的.md文件不能hexo s生成成功，也无法上传，需要？？？所以最好是直接在blog下gitbash直接hexo n,然后再去修改就可以了。</p>
+
       
 
       
@@ -251,7 +286,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/09/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/09/27/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -265,18 +300,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2022/09/27/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          搭建个人博客
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/09/27/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2022/09/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我的第一篇博客文章</div>
       <i class="icon-circle-right"></i>
     </a>
   
