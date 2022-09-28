@@ -16,7 +16,7 @@
 <meta property="og:description" content="将个人博客(hexo搭建)部署到云服务器上: 注意nginx的目录和相关命令， lsof -i:端口号	&#x2F;&#x2F;查看端口进程情况，可以用来看部署的hexo是否启动了 部署前一定要去安全组开放相应的端口，4000,8080等，并且端口一定要和nginx中的nginx.conf对应 修改nginx.conf最为重要，否则即使部署了也无法成功，一般容易显示403，代表部署成功，但是目录或">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-09-27T18:13:14.000Z">
-<meta property="article:modified_time" content="2022-09-27T18:31:21.848Z">
+<meta property="article:modified_time" content="2022-09-28T08:28:18.949Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="云服务器">
 <meta name="twitter:card" content="summary">
@@ -182,6 +182,7 @@
 <p>修改nginx.conf最为重要，否则即使部署了也无法成功，一般容易显示403，代表部署成功，但是目录或者端口不对，一定要将nginx中的servername项改为localhost，不然部署了也无法成功会403，同时还要去宝塔里修改网站目录和运行目录，网站目录修改为存放需要显示的index.html文件的上一级文件夹，其中hexo是使用public文件夹，因此只需要到public这一文件夹即可</p>
 <p>niginx.conf中也是如此，也需要注意root的文件夹应该是hexo中的public文件夹</p>
 <p>第二就是hook（钩子的使用),如何将一个本地的hexo同步部署到github和云服务器上，github上需要在项目的setting项下找到webhook，根据教程跟进，暂时没有部署完全，等考完再继续部署，其中需要了解的知识点有进程和端口的对应关系以及如何部署，不同端口怎么通过外部访问，怎么分配，nginx的使用（这很重要),hook(钩子）的使用，也很重要，可以简化部署步骤，多平台部署,暂且先写这么多</p>
+<p>要想服务器访问通过，一定需要在宝塔面板的左边栏找到安全添加相应的程序端口，比如默认的hexo是4000端口，就必须添加这个端口!!!然后就可以通过     公网ip:端口号   进行访问</p>
 
       
 
@@ -285,6 +286,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2022/09/28/Typora%E7%9A%84%E4%BD%BF%E7%94%A8%E5%92%8CMarkdown%E5%9F%BA%E6%9C%AC%E5%86%99%E4%BD%9C/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Typora的使用和Markdown基本写作
+        
+      </div>
+    </a>
   
   
     <a href="/2022/09/27/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
@@ -415,6 +425,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">云服务器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">博客写作</a>
               </li>
             
             <div class="clearfix"></div>
